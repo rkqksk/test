@@ -2,6 +2,33 @@ import os
 import streamlit as st
 import pandas as pd
 import datetime
+import requests
+import base64
+
+url = "https://api.github.com/repos/rkqksk/test/blob/a7210494378232be6cb0e4bce4637278b652d986/data.csv"
+token = "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"
+
+data = "col1,col2,col3\nval1,val2,val3"
+
+headers = {
+    "Authorization": f"token {token}",
+    "Content-Type": "application/json"
+}
+
+content = base64.b64encode(data.encode("utf-8")).decode("utf-8")
+
+payload = {
+    "message": "Add data to CSV file",
+    "content": content
+}
+
+response = requests.put(url, json=payload, headers=headers)
+
+if response.status_code == 201:
+    print("File created successfully")
+else:
+    print(f"Error: {response.text}")
+
 
 # 데이터를 저장할 파일의 경로를 지정합니다.
 url = 'https://github.com/rkqksk/test/blob/a7210494378232be6cb0e4bce4637278b652d986/data.csv'
