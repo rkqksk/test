@@ -5,7 +5,7 @@ import datetime
 import requests
 import base64
 
-
+# 33333
 
 # 데이터를 저장할 파일의 경로를 지정합니다.
 url = 'https://github.com/rkqksk/test/blob/a7210494378232be6cb0e4bce4637278b652d986/data.csv'
