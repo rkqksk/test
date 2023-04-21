@@ -3,9 +3,6 @@ import streamlit as st
 import pandas as pd
 import datetime
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(["4월","5월","6월","7월","8월","9월","10월","11월","12월"])
-
-
 # 데이터를 저장할 파일의 경로를 지정합니다.
 FILE_PATH = 'https://github.com/rkqksk/test/blob/a7210494378232be6cb0e4bce4637278b652d986/data.csv'
 
