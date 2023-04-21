@@ -5,7 +5,7 @@ import datetime
 import requests
 import base64
 
-url = "https://api.github.com/repos/rkqksk/test/conent/a7210494378232be6cb0e4bce4637278b652d986/data.csv"
+url = "https://api.github.com/repos/rkqksk/test/content/a7210494378232be6cb0e4bce4637278b652d986/data.csv"
 token = "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"
 
 data = "col1,col2,col3\nval1,val2,val3"
