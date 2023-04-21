@@ -4,16 +4,16 @@ import pandas as pd
 import datetime
 
 # 데이터를 저장할 파일의 경로를 지정합니다.
-FILE_PATH = 'https://github.com/rkqksk/test/blob/a7210494378232be6cb0e4bce4637278b652d986/data.csv'
+url = 'https://github.com/rkqksk/test/blob/a7210494378232be6cb0e4bce4637278b652d986/data.csv'
 
 def save_data(data):
     # 입력된 데이터를 CSV 파일에 저장합니다.
-    if not os.path.exists(FILE_PATH):
-        data.to_csv(FILE_PATH, index=False)
+    if not os.path.exists(url):
+        data.to_csv(url, index=False)
     else:
-        existing_data = pd.read_csv(FILE_PATH)
+        existing_data = pd.read_csv(url)
         data = pd.concat([existing_data, data], ignore_index=True)
-        data.to_csv(FILE_PATH, index=False)
+        data.to_csv(url, index=False)
 
 def main():
     st.title(':blue_book: 작업일반')
